@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "./UserContext";
+import UserContext from "./SetUsrContext";
 
 function Sidebar() {
   const userData = useContext(UserContext);
@@ -36,11 +36,7 @@ function Sidebar() {
         </Link>
       </li>
 
-      {/* <li class="nav-item active">
-                <Link class="nav-link" to="/portal/userlist">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Welcome <br /> Mr. {userData.user.name}</span></Link>
-            </li> */}
+      
     </ul>
   );
 }

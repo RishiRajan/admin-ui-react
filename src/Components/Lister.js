@@ -33,7 +33,6 @@ function Userlist() {
       );
       if (deleteData) {
         await axios.delete(
-          // `https://62b6abce42c6473c4b4653d7.mockapi.io/users/${id}`
           `https://6445838f914c816083d0844d.mockapi.io/users/v1/users/${id}`
         );
       }

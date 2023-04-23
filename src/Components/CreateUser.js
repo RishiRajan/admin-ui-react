@@ -28,7 +28,7 @@ function Createuser() {
       if (!values.email) {
         errors.email = "Please Enter the Email";
       }
-      // (using regular expression we do it email validate)
+
       if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
         errors.email = "Please Enter valid Email";
       }
@@ -51,7 +51,7 @@ function Createuser() {
       try {
         setLoading(true);
         await axios.post(
-          "https://62b6abce42c6473c4b4653d7.mockapi.io/users",
+          "https://6445838f914c816083d0844d.mockapi.io/users/v1/users",
           values
         );
         navigate("/portal/userlist");
@@ -93,8 +93,6 @@ function Createuser() {
             <span style={{ color: "red" }}>{myFormik.errors.email}</span>
           </div>
 
-          {/* Same like that*/}
-
           <div className="col-lg-4">
             <label for="">Country</label>
             <input
@@ -135,41 +133,6 @@ function Createuser() {
             <span style={{ color: "red" }}>{myFormik.errors.city}</span>
           </div>
 
-          {/* <div className='col-lg-4'>
-                        <label for="">Country</label>
-                        <select name='country' value={myFormik.values.country}
-                            onChange={myFormik.handleChange} className={`form-control ${myFormik.errors.country ? 'is-invalid' : 'is-valid'}`}>
-                            <option value={""}>---Select---</option>
-                            <option value={"IN"}>India</option>
-                            <option value={"USA"}>United States Of America</option>
-                        </select>
-                        <span style={{ color: "red" }}>{myFormik.errors.country}</span>
-                    </div>
-                    <div className='col-lg-4'>
-                        <label for="">State</label>
-                        <select name='state' value={myFormik.values.state}
-                            onChange={myFormik.handleChange} className={`form-control ${myFormik.errors.state ? 'is-invalid' : 'is-valid'}`}>
-                            <option value={""}>---Select---</option>
-                            <option value={"TN"}>Tamilnadu</option>
-                            <option value={"KL"}>Kerala</option>
-                            <option value={"NY"}>New York</option>
-                            <option value={"WN"}>Washington</option>
-                        </select>
-                        <span style={{ color: "red" }}>{myFormik.errors.state}</span>
-                    </div>
-                    <div className='col-lg-4'>
-                        <label for="">City</label>
-                        <select name='city' value={myFormik.values.city}
-                            onChange={myFormik.handleChange} className={`form-control ${myFormik.errors.city ? 'is-invalid' : 'is-valid'}`}>
-                            <option value={""}>---Select---</option>
-                            <option value={"CH"}>Chennai</option>
-                            <option value={"KC"}>Kochi</option>
-                            <option value={"C1"}>US City 1</option>
-                            <option value={"C2"}>US City 2</option>
-                        </select>
-                        <span style={{ color: "red" }}>{myFormik.errors.city}</span>
-                    </div> */}
-
           <div className="col-lg-3 mt-3">
             <input
               type="submit"
@@ -178,10 +141,6 @@ function Createuser() {
               className="btn btn-primary"
             />
           </div>
-
-          {/* <code>
-                        {JSON.stringify(myFormik.values)}
-                    </code> */}
         </div>
       </form>
     </div>

@@ -4,13 +4,13 @@ import "./Styles/App.css";
 
 import "./Styles/sb-admin-2.min.css";
 import Dashboard from "./Components/Dashboard";
-import Userlist from "./Components/Userlist";
+import Userlist from "./Components/Lister";
 import Login from "./Components/Login";
 import Portal from "./Components/Portal";
 import Createuser from "./Components/CreateUser";
-import UserView from "./Components/UserView";
-import UserEdit from "./Components/UserEdit";
-import { UserProvider } from "./Components/UserContext";
+import UserView from "./Components/ViewUser";
+import UserEdit from "./Components/EditUser";
+import { UserProvider } from "./Components/SetUsrContext";
 
 function App() {
   return (
