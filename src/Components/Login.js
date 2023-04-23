@@ -77,7 +77,7 @@ function Login() {
                     </div>
                     <div class="text-center">
                       <a class="small" href="register.html">
-                        Create an Account!
+                        Create Account now
                       </a>
                     </div>
                   </div>
